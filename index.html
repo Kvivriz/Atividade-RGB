@@ -1,0 +1,150 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cores: Modelos Aditivo e Subtrativo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Entendendo os Modelos de Cores</h1>
+        <p class="subtitle">Um guia completo sobre como as cores funcionam em telas e impressão</p>
+    </header>
+
+    <main>
+        <section id="modelo-aditivo">
+            <h2>Modelo Aditivo (RGB)</h2>
+            <div class="content-wrapper">
+                <div class="text-content">
+                    <p>O modelo aditivo é usado em dispositivos que emitem luz, como telas de computador, smartphones e TVs. Este modelo recebe este nome porque as cores são criadas <strong>adicionando luz</strong> ao preto (ausência de luz).</p>
+                    
+                    <h3>Cores Primárias do RGB:</h3>
+                    <ul class="enhanced-list">
+                        <li><span class="red-text">Vermelho (Red)</span> - Comprimento de onda de aproximadamente 700nm</li>
+                        <li><span class="green-text">Verde (Green)</span> - Comprimento de onda de aproximadamente 546nm</li>
+                        <li><span class="blue-text">Azul (Blue)</span> - Comprimento de onda de aproximadamente 435nm</li>
+                    </ul>
+
+                    <h3>Cores Secundárias (Combinações):</h3>
+                    <ul class="enhanced-list">
+                        <li><span class="red-text">Vermelho</span> + <span class="green-text">Verde</span> = <span style="color: #ffff00">Amarelo</span></li>
+                        <li><span class="red-text">Vermelho</span> + <span class="blue-text">Azul</span> = <span style="color: #ff00ff">Magenta</span></li>
+                        <li><span class="green-text">Verde</span> + <span class="blue-text">Azul</span> = <span style="color: #00ffff">Ciano</span></li>
+                        <li>Todas as cores = Branco (Luz total)</li>
+                    </ul>
+
+                    <div class="info-box">
+                        <h4>Você sabia?</h4>
+                        <p>Nossos olhos possuem três tipos de cones (células fotorreceptoras) que são sensíveis especificamente às cores vermelho, verde e azul. É por isso que o modelo RGB funciona tão bem para dispositivos eletrônicos!</p>
+                    </div>
+                </div>
+                <div class="demo-rgb">
+                    <div class="rgb-circles">
+                        <div class="circle red"></div>
+                        <div class="circle green"></div>
+                        <div class="circle blue"></div>
+                    </div>
+                    <p class="demo-caption">Passe o mouse sobre os círculos para ver como as cores se combinam</p>
+                </div>
+            </div>
+
+            <div class="pixel-explanation">
+                <h3>Como funcionam os pixels?</h3>
+                <p>Cada pixel em uma tela é composto por três subpixels - um vermelho, um verde e um azul. Quando você olha uma tela bem de perto (com uma lupa), pode ver esta estrutura:</p>
+                
+                <div class="pixel-demo">
+                    <div class="pixel">
+                        <div class="subpixel red"><span>R</span></div>
+                        <div class="subpixel green"><span>G</span></div>
+                        <div class="subpixel blue"><span>B</span></div>
+                    </div>
+                </div>
+                
+                <div class="pixel-info">
+                    <h4>Como a intensidade funciona:</h4>
+                    <ul class="pixel-intensity">
+                        <li>Cada subpixel pode ter 256 níveis de intensidade (0-255)</li>
+                        <li>Combinando as intensidades: 256 × 256 × 256 = 16.777.216 cores possíveis</li>
+                        <li>RGB(255,255,255) = Branco</li>
+                        <li>RGB(0,0,0) = Preto</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="modelo-subtrativo">
+            <h2>Modelo Subtrativo (CMYK)</h2>
+            <div class="content-wrapper">
+                <div class="text-content">
+                    <p>O modelo subtrativo é usado em impressão e baseia-se na <strong>absorção de luz</strong>. Ao contrário das telas, que emitem luz, os materiais impressos refletem a luz ambiente. As tintas funcionam como filtros, subtraindo determinadas cores da luz branca.</p>
+
+                    <h3>Cores do Processo CMYK:</h3>
+                    <ul class="enhanced-list">
+                        <li><span class="cyan-text">Ciano (Cyan)</span> - Absorve vermelho, reflete verde e azul</li>
+                        <li><span class="magenta-text">Magenta (Magenta)</span> - Absorve verde, reflete vermelho e azul</li>
+                        <li><span class="yellow-text">Amarelo (Yellow)</span> - Absorve azul, reflete vermelho e verde</li>
+                        <li><span class="black-text">Preto (Key/Black)</span> - Absorve todas as cores</li>
+                    </ul>
+
+                    <h3>Por que usar preto (K)?</h3>
+                    <ul class="enhanced-list">
+                        <li>Economia: usar apenas CMY para criar preto gastaria muita tinta</li>
+                        <li>Qualidade: o preto puro oferece mais contraste</li>
+                        <li>Precisão: textos e linhas finas ficam mais nítidos</li>
+                        <li>Profundidade: ajuda a criar sombras mais realistas</li>
+                    </ul>
+
+                    <div class="info-box">
+                        <h4>Curiosidade:</h4>
+                        <p>A letra 'K' em CMYK vem de "Key" (chave), não de "blacK". Isso porque o preto é a cor chave usada para adicionar detalhes e alinhar as outras cores durante a impressão.</p>
+                    </div>
+                </div>
+                <div class="demo-cmyk">
+                    <div class="cmyk-circles">
+                        <div class="circle cyan"></div>
+                        <div class="circle magenta"></div>
+                        <div class="circle yellow"></div>
+                        <div class="circle black"></div>
+                    </div>
+                    <p class="demo-caption">Observe como as cores se misturam de forma subtrativa</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="comparacao">
+            <h2>Comparação entre os Modelos</h2>
+            <div class="comparison-table">
+                <div class="model-column">
+                    <h3>Modelo Aditivo (RGB)</h3>
+                    <ul class="comparison-list">
+                        <li><strong>Meio:</strong> Dispositivos eletrônicos (telas)</li>
+                        <li><strong>Princípio:</strong> Emissão de luz</li>
+                        <li><strong>Cores primárias:</strong> Vermelho, Verde, Azul</li>
+                        <li><strong>Base:</strong> Parte do preto (sem luz)</li>
+                        <li><strong>Resultado máximo:</strong> Branco (todas as luzes)</li>
+                        <li><strong>Aplicações:</strong> Monitores, TVs, celulares</li>
+                        <li><strong>Gamut:</strong> Maior gama de cores vivas</li>
+                    </ul>
+                </div>
+                <div class="model-column">
+                    <h3>Modelo Subtrativo (CMYK)</h3>
+                    <ul class="comparison-list">
+                        <li><strong>Meio:</strong> Materiais impressos</li>
+                        <li><strong>Princípio:</strong> Absorção de luz</li>
+                        <li><strong>Cores primárias:</strong> Ciano, Magenta, Amarelo, Preto</li>
+                        <li><strong>Base:</strong> Parte do branco (papel)</li>
+                        <li><strong>Resultado máximo:</strong> Preto (todas as tintas)</li>
+                        <li><strong>Aplicações:</strong> Impressão, pintura</li>
+                        <li><strong>Gamut:</strong> Menor que RGB, cores mais suaves</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolvido para aprendizado sobre modelos de cores</p>
+        <p class="footer-note">As demonstrações são interativas - experimente passar o mouse sobre os elementos!</p>
+    </footer>
+</body>
+</html>
